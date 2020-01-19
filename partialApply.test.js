@@ -9,11 +9,7 @@ describe('The function logger', () => {
 		console.log = jest.fn();
 		var info = logger('INFO:');
 		info('message');
-		expect(console.log).toHaveBeenCalled('INFO:', 'message');
+		expect(console.log).toHaveBeenCalledWith('INFO:', 'message');
 	});
-	it('should return nothing', () => {
-		var info = logger('INFO:');
-		const result = info('message');
-		expect(result).toBeUndefined();
-	});
+		
 });
